@@ -1,0 +1,19 @@
+{
+  "name": "gulp-test",
+  "version": "0.0.1",
+  "author": "Graeme Fulton <graemefulton@hotmail.com>",
+  "description": "a simple gulp project",
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10"
+  },
+  "scripts": {
+    "start": "gulp"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  },
+  "dependencies": {
+    "gulp-sass": "^2.1.1"
+  }
+}
