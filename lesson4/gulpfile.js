@@ -12,6 +12,9 @@ var browserSync = require('browser-sync').create();
 gulp.task('default', function() {
   // use gulp watch to listen for changes in sass, then execute styles task
   gulp.watch('sass/**/*.scss', ['styles']);
+  gulp.run(
+    'browser-sync'
+  );
 
 });
 
@@ -24,8 +27,12 @@ gulp.task('default', function() {
 gulp.task('browser-sync', function(){
 
   browserSync.init({
-    server: "./"
+    server: {
+             baseDir: "./"
+         }
   });
+  gulp.watch("./*.html").on('change', browserSync.reload);
+
 
 })
 
@@ -48,5 +55,6 @@ gulp.task('styles', function(){
       }))
       //save css to css folder
       .pipe(gulp.dest('./css'))
-
+      //update browser-sync stream
+	    .pipe(browserSync.stream());
 })
