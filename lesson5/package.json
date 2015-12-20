@@ -1,0 +1,24 @@
+{
+  "name": "gulp-test",
+  "version": "0.0.1",
+  "author": "Graeme Fulton <graemefulton@hotmail.com>",
+  "description": "a simple gulp project",
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10"
+  },
+  "scripts": {
+    "start": "gulp"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.10.1",
+    "eslint-config-google": "^0.3.0",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^1.1.1"
+  },
+  "dependencies": {
+    "browser-sync": "^2.10.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-sass": "^2.1.1"
+  }
+}
