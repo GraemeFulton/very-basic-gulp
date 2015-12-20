@@ -58,7 +58,7 @@ gulp.task('styles', function(){
 
   gulp.src('sass/**/*.scss')
       //pipe sass to convert scss to css
-      .pipe(sass()
+      .pipe(sass({outputStyle:'compressed'})
           //on sass error, don't break the build, just log an error
           .on('error', sass.logError))
       //pipe autoprefixer
